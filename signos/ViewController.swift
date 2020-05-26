@@ -47,6 +47,7 @@ class ViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         let alerta = UIAlertController(title: dados[indexPath.row].signo, message: dados[indexPath.row].descricao, preferredStyle: UIAlertController.Style.alert)
         alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alerta, animated: true)
